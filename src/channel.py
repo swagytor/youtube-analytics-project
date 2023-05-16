@@ -19,4 +19,4 @@ class Channel:
     def print_info(self) -> None:
         """Выводит в консоль информацию о канале."""
         channel = youtube.channels().list(id=self.channel_id, part='snippet,statistics').execute()
-        pprint(channel)
+        pprint(channel, sort_dicts=False)
